@@ -2,6 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require 'active_record'
 
+# alphanumeric characters, case insensitive, stringified
+AVAILABLE_CHARACTERS = ( ('a'..'z').to_a + (0..9).to_a ).map {|char| char.to_s }
+
 
 ## Configure of Database
 configure :development, :test, :production do
